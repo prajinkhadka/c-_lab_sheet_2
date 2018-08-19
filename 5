@@ -1,0 +1,16 @@
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+int main(){
+int x = 123456;
+int e = (int)(log(x) / log(10));
+int d, sum = 0;
+
+for(int i = e; i >= 0; i--)
+{
+d = (x % (int)pow(10, i + 1)) / (int)pow(10, i);
+sum += pow(d, 2);
+}
+cout<<"The sum is"<<sum;
+}

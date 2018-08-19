@@ -1,0 +1,67 @@
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int o;
+    int num1;
+
+    cout << "Enter \n \n 1.check if it multiple of 5 or 11 \n 2.check if it is a multiple of 5 and 11  \n 3.  check if it is multiple of 5 but not 11 \n 4. check if multiple of 5 or not";
+    cin >> o;
+
+    cout << "Enter a number \n ";
+    cin >> num1;
+    
+    switch (o) 
+    {
+        case 1:
+            if((num1%5) ==0 || num1%11 == 0 ){
+                if(num1 %5 == 0){
+                    cout<<"divisibile by 5";
+                }
+                else{
+                    cout<<"divisilbe by 11";
+                }
+            }
+            else{
+                cout<<"its not divivlsbe by 5 or 11";
+            }
+            break;
+        case 2:
+        if((num1%5) ==0 && num1%11 == 0 ){
+                if(num1 %5 == 0){
+                    cout<<"it is a multiple of 5 and 11";
+                }
+                
+            else{
+                cout<<"its not multiple of 5 and 11";
+            }
+        }
+            break;
+        case 3:
+         if((num1%5) ==0 || num1%11 != 0 ){
+                if(num1 %5 == 0){
+                    cout<<"it is a multiple of 5 but not 11";
+                }
+                
+            else{
+                cout<<"its not multiple of 5 and 11";
+            }
+        }
+        break;
+        case 4:
+        if(num1 %5 == 0)
+        cout<<"multiple of 5";
+        else
+        cout<<"not multiple  of 5";
+        break;
+        
+        default:
+            cout << "Error! operator is not correct";
+            break;
+    }
+    
+    return 0;
+}
